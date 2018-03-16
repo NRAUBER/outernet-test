@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial;
+        font-size: 17px;
+    }
+
+    #myVideo {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+    }
+
+    .content {
+        position: fixed;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        color: #f1f1f1;
+        width: 100%;
+        padding: 20px;
+    }
+
+    #myBtn {
+        width: 200px;
+        font-size: 18px;
+        padding: 10px;
+        border: none;
+        background: #000;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    #myBtn:hover {
+        background: #ddd;
+        color: black;
+    }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <video  muted loop id="myVideo">
+        <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4"> Your browser does not support HTML5 video.
+    </video>
+    <div class="content">
+        <h1>Fake controller</h1>
+        <p>Testing HTML video manipulation based on Mouse position<br>
+        TODO : Add mobile controller on swipe <br>
+        TODO : Set socket on remote server<br>
+        TODO : Set socket on both controller<br>
+      </p>
+        <form name="Form1">
+            POSX:<input type="text" name="posx"><br> 
+            Width:<input type="text" name="videoWidth"><br>
+            %:<input type="text" name="pource"><br>     
+            Video Lenght:<input type="text" name="videoLength"><br>
+            Video currentTime:<input type="text" name="currentTime"><br>
+            Video moveToSec:<input type="text" name="moveToSec"><br>
+
+        </form>
+        <button id="myBtn" onclick="playPause()">Pause</button>
+    </div>
+    <script src="videoApp.js" charset="utf-8" type="text/javascript"></script>
+</body>
+
+</html>
